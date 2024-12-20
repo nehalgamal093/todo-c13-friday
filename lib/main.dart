@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_c13_friday/providers/my_provider.dart';
+import 'package:todo_c13_friday/screens/create_event.dart';
 import 'package:todo_c13_friday/screens/home/home.dart';
 import 'package:todo_c13_friday/screens/introduction_screen.dart';
 import 'package:todo_c13_friday/screens/login_screen.dart';
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
         LoginScreen.routeName: (context) => LoginScreen(),
         RegisterScreen.routeName: (context) => RegisterScreen(),
         HomeScreen.routeName: (context) => HomeScreen(),
+        CreateEvent.routeName: (context) => CreateEvent(),
       },
     );
   }

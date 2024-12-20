@@ -22,8 +22,10 @@ class EventItem extends StatelessWidget {
                       height: double.infinity,
                     )),
                 Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18)),
