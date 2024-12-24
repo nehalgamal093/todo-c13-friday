@@ -105,7 +105,7 @@ class LoginScreen extends StatelessWidget {
                   .titleSmall!
                   .copyWith(color: Theme.of(context).primaryColor),
             ),
-            SizedBox(
+            const SizedBox(
               height: 24,
             ),
             ElevatedButton(
@@ -113,7 +113,7 @@ class LoginScreen extends StatelessWidget {
                 Navigator.pushNamed(context, HomeScreen.routeName);
               },
               style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(vertical: 12),
+                  padding: const EdgeInsets.symmetric(vertical: 12),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12)),
                   backgroundColor: Theme.of(context).primaryColor),
@@ -125,7 +125,7 @@ class LoginScreen extends StatelessWidget {
                     .copyWith(color: Colors.white),
               ),
             ),
-            SizedBox(
+           const SizedBox(
               height: 24,
             ),
             InkWell(

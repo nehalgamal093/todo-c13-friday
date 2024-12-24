@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:todo_c13_friday/main.dart';
 import 'package:todo_c13_friday/providers/my_provider.dart';
 import 'package:todo_c13_friday/screens/login_screen.dart';
+import 'package:todo_c13_friday/screens/onboarding_screen/onboarding_screen.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class IntroductionScreen extends StatelessWidget {
@@ -95,7 +96,7 @@ class IntroductionScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(

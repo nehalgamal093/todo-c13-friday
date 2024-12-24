@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:todo_c13_friday/models/OnBoardingModel.dart';
 import 'package:todo_c13_friday/theme/theme.dart';
 
 class LightTheme extends BaseTheme {
@@ -10,25 +11,21 @@ class LightTheme extends BaseTheme {
   Color get primaryColor => Color(0xFF5669FF);
 
   @override
+  Color get dotColor => Color(0xffF4EBDC);
+
+  @override
   Color get textColor => Color(0xFF1C1C1C);
 
   @override
   ThemeData get themeData => ThemeData(
-
         primaryColor: primaryColor,
-        focusColor: Color(0xFF7B7B7B),
+        focusColor: const Color(0xFF7B7B7B),
         scaffoldBackgroundColor: backgroundColor,
         floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: primaryColor,
-
-          shape: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(35),
-            borderSide: BorderSide(
-              color: Colors.white,
-              width: 4
-            )
-          )
-        ),
+            backgroundColor: primaryColor,
+            shape: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(35),
+                borderSide: const BorderSide(color: Colors.white, width: 4))),
         appBarTheme:
             AppBarTheme(centerTitle: true, backgroundColor: backgroundColor),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -55,6 +52,8 @@ class LightTheme extends BaseTheme {
             fontWeight: FontWeight.w500,
             color: textColor,
           ),
+          displayMedium: GoogleFonts.inter(
+              fontSize: 20, fontWeight: FontWeight.w700, color: primaryColor),
         ),
       );
 }

@@ -9,6 +9,7 @@ class DarkTheme extends BaseTheme {
   @override
   Color get primaryColor => Color(0xFF5669FF);
 
+
   @override
   Color get textColor => Color(0xFFF4EBDC);
 
@@ -54,6 +55,8 @@ class DarkTheme extends BaseTheme {
             fontWeight: FontWeight.w500,
             color: textColor,
           ),
+          displayMedium: GoogleFonts.inter(
+              fontSize: 20, fontWeight: FontWeight.w700, color: primaryColor),
         ),
       );
 }

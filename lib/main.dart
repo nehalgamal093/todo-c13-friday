@@ -1,11 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo_c13_friday/cache/cache_helper.dart';
 import 'package:todo_c13_friday/providers/my_provider.dart';
 import 'package:todo_c13_friday/screens/create_event.dart';
 import 'package:todo_c13_friday/screens/home/home.dart';
 import 'package:todo_c13_friday/screens/introduction_screen.dart';
 import 'package:todo_c13_friday/screens/login_screen.dart';
+import 'package:todo_c13_friday/screens/onboarding_screen/onboarding_screen.dart';
 import 'package:todo_c13_friday/screens/register_screen.dart';
 import 'package:todo_c13_friday/theme/dark_theme.dart';
 import 'package:todo_c13_friday/theme/light_theme.dart';
@@ -13,6 +15,7 @@ import 'package:todo_c13_friday/theme/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await CacheHelper.init();
   await EasyLocalization.ensureInitialized();
   runApp(
     ChangeNotifierProvider(
@@ -44,13 +47,13 @@ class MyApp extends StatelessWidget {
       darkTheme: darkTheme.themeData,
       themeMode: provider.themeMode,
       debugShowCheckedModeBanner: false,
-      initialRoute: IntroductionScreen.routeName,
+      initialRoute:IntroductionScreen.routeName,
       routes: {
         IntroductionScreen.routeName: (context) => IntroductionScreen(),
-        LoginScreen.routeName: (context) => LoginScreen(),
+        LoginScreen.routeName: (context) =>CacheHelper.getEligibility() ==true? LoginScreen():OnBoardingScreen(),
         RegisterScreen.routeName: (context) => RegisterScreen(),
         HomeScreen.routeName: (context) => HomeScreen(),
-        CreateEvent.routeName: (context) => CreateEvent(),
+        CreateEvent.routeName: (context) => CreateEvent()
       },
     );
   }
